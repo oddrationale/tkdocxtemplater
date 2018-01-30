@@ -1,0 +1,15 @@
+altgraph==0.15
+certifi==2018.1.18
+docxtpl==0.4.6
+future==0.16.0
+Jinja2==2.10
+lxml==4.1.1
+macholib==1.9
+MarkupSafe==1.0
+pefile==2017.11.5
+PyInstaller==3.3.1
+pypiwin32==222
+python-docx==0.8.6
+pywin32==222
+six==1.11.0
+wincertstore==0.2
