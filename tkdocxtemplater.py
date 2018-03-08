@@ -44,10 +44,13 @@ class TkDocxTemplaterGui(ttk.Frame):
                 context = json.load(open(self.json_file.get()))
             doc.render(context)
             doc.save(self.output_file.get())
+            messagebox.showinfo("Generated output", "Successfully generated output.")
         except (docx.opc.exceptions.PackageNotFoundError, FileNotFoundError):
             messagebox.showerror("Error", "File not found.")
         except json.decoder.JSONDecodeError:
             messagebox.showerror("Error", "Invalid JSON input.")
+        except Exception as e:
+            messagebox.showerror("Error", str(e))
 
     def configure_gui(self):
         self.master.title("Docx Templater")
