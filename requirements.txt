@@ -1,6 +1,6 @@
 altgraph==0.15
 certifi==2018.1.18
-docxtpl==0.4.6
+docxtpl==0.4.7
 future==0.16.0
 Jinja2==2.10
 lxml==4.1.1
