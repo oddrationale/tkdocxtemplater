@@ -1,4 +1,5 @@
 import json
+import sys
 import tkinter as tk
 from tkinter import ttk
 from tkinter import filedialog, messagebox
@@ -157,6 +158,11 @@ class TkDocxTemplaterGui(ttk.Frame):
 
 
 if __name__ == '__main__':
-    root = tk.Tk()
-    my_gui = TkDocxTemplaterGui(root)
-    root.mainloop()
+    if len(sys.argv) == 4:
+        doc = DocxTemplate(sys.argv[1])
+        doc.render(json.load(open(sys.argv[2])))
+        doc.save(sys.argv[3])
+    else:        
+        root = tk.Tk()
+        my_gui = TkDocxTemplaterGui(root)
+        root.mainloop()
