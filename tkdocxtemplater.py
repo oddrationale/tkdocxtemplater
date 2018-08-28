@@ -162,6 +162,7 @@ if __name__ == '__main__':
         doc = DocxTemplate(sys.argv[1])
         doc.render(json.load(open(sys.argv[2])))
         doc.save(sys.argv[3])
+        sys.exit()
     else:        
         root = tk.Tk()
         my_gui = TkDocxTemplaterGui(root)
