@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 import json
 import sys
 import tkinter as tk
@@ -42,7 +44,7 @@ class TkDocxTemplaterGui(ttk.Frame):
             if self.use_manual_json_data.get() == True:
                 context = json.loads(self.textbox.get('1.0', 'end-1c'))
             else:
-                context = json.load(open(self.json_file.get()))
+                context = json.load(open(self.json_file.get(), encoding="utf-8"))
             doc.render(context)
             doc.save(self.output_file.get())
             messagebox.showinfo("Generated output", "Successfully generated output.")
